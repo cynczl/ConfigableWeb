@@ -1,7 +1,7 @@
 .flickerplate {
 	position:relative;
 	width:100%;
-	height:600px;
+	height:60%;
 	background-color:#e6e6e6;
 	overflow:hidden
 }
@@ -81,7 +81,7 @@ font-size:1.667em
 .flickerplate .arrow-navigation.left .arrow {
 	opacity:0;
 	margin:0px 0px 0px 50%;
-	background-image:url("../images/flickerplate/arrow-left-light.png");
+	background-image:url("../img/arrow-left-light.png");
 	background-repeat:no-repeat;
 	background-position:left
 }
@@ -91,7 +91,7 @@ font-size:1.667em
 .flickerplate .arrow-navigation.right .arrow {
 	opacity:0;
 	margin:0px 0px 0px -50%;
-	background-image:url("../images/flickerplate/arrow-right-light.png");
+	background-image:url("../img/arrow-right-light.png");
 	background-repeat:no-repeat;
 	background-position:right
 }

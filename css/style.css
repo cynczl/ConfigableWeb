@@ -5,12 +5,7 @@
  *
 */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     font-weight: 100;
 }
 
@@ -201,8 +196,9 @@ body.body-small .navbar-top-links li:last-child {
 }
 
 .nav-header {
-    padding: 33px 25px;
-    background: url("patterns/header-profile.png") no-repeat;
+    padding: 20px 25px;
+    background: url(patterns/header-profile.png) no-repeat;
+    text-align: center;
 }
 
 .pace-done .nav-header {
@@ -720,17 +716,17 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     color: #fff;
 }
 
-.btn-primary {
+body .btn-primary {
     background-color: #1ab394;
     border-color: #1ab394;
     color: #FFFFFF;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
+body .btn-primary:hover,
+body .btn-primary:focus,
+body .btn-primary:active,
+body .btn-primary.active,
+body .open .dropdown-toggle.btn-primary {
     background-color: #18a689;
     border-color: #18a689;
     color: #FFFFFF;
@@ -3984,9 +3980,9 @@ img.circle-border {
 }
 
 code {
-    background-color: #F9F2F4;
+    background-color: transparent;
     border-radius: 4px;
-    color: #ca4440;
+    color: #999;
     font-size: 90%;
     padding: 2px 4px;
     white-space: nowrap;
@@ -4791,7 +4787,7 @@ body.modal-open {
     max-width: 400px;
     z-index: 100;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 8%;
 }
 
 .lockscreen.middle-box {
@@ -4816,15 +4812,15 @@ body.modal-open {
 }
 
 .logo-name {
-    color: #e6e6e6;
-    font-size: 180px;
-    font-weight: 800;
-    letter-spacing: -10px;
+    color: #2f4050;
+    font-size: 95px;
+    font-weight: 0;
+    letter-spacing: 0px;
     margin-bottom: 0px;
 }
 
 .middle-box h1 {
-    font-size: 170px;
+    font-size: 84px;
 }
 
 .wrapper .middle-box {
@@ -7889,4 +7885,96 @@ body.skin-3 {
         width: 12.5%;
         font-size: 12px
     }
+}
+
+.list-contain {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.list-contain-item:hover {
+    background-color: #fafafa;
+    color: white;
+}
+
+
+/* particleground demo */
+
+* { 
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #16a085;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
+}
+.intro form {
+    position: relative;
+    width: 305px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 48px;
+  }
+  h1::after {
+    height: 8px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .intro {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h1::after {
+    height: 6px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 28px;
+  }
+  h1::after {
+    height: 4px;
+  }
 }
