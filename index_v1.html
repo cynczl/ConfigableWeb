@@ -42,6 +42,9 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-12">
+                <div class="logo-name" id="down" style="text-align:center;margin:10px 0;font-size:36px;"><button class="btn btn-primary dim" id="btn2">点击下载开发文档</button></div>  
+            </div>
         </div>
     </div>
 
@@ -49,9 +52,32 @@
     <!-- 全局js -->
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
     <script src="js/plugins/layer/layer.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- 自定义js -->
     <script src="js/content.js"></script>
+    <script>
+    $(function(){
+        var $eleBtn1 = $("#btn1");
+        var $eleBtn2 = $("#btn2");
+
+        //本系统开发文档的后端接口：https://codeload.github.com/cynczl/ConfigableWeb/zip/master
+        //方法一：window.open()
+        $eleBtn1.click(function(){
+            window.open("https://codeload.github.com/cynczl/ConfigableWeb/zip/master");
+        });
+
+        //方法二：通过form
+        $eleBtn2.click(function(){
+            var $eleForm = $("<form method='get'></form>");
+            $eleForm.attr("action","https://codeload.github.com/cynczl/ConfigableWeb/zip/master");
+            $(document.body).append($eleForm);
+            //提交表单，实现下载
+            $eleForm.submit();
+        });
+    })
+</script>
+
 </body>
 
 </html>

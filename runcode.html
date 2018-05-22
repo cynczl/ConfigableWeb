@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html height="100%">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="author" content="DH">
+<title>代码调试</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.runCode.css">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+<style>
+.playcode{
+    /*margin: 2%;*/
+}
+</style>
+</head>
+<body height="100%"style="
+    background:white;
+">
+<div class="main ibox" style="
+    height: inherit;margin:0;
+">
+	<div class="ibox-title">
+		<h5>代码调试</h5>
+	</div>
+	<div class="ibox-content" style="
+    height: 90%;
+">
+    	<textarea class="playcode form-control"  style="height:inherit;"></textarea> <br>
+    	<button type="button" class="btn btn-primary" id="start">run code</button>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.runCode.js"></script>
+<script>
+var str="<p>试试粘贴你的代码</p>\n\n\<style\>h1{font-family:Helvetica, Arial, sans-serif;}\</style\>\n\n\<script\>document.write('代码预览')\</script\>";
+$(".playcode").text(str)
+
+
+$("#start").on('click', function() {
+    $(".playcode").runCode();
+})
+</script>
+</body>
+</html>
